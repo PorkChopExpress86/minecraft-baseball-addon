@@ -77,3 +77,9 @@ For the eye black effect, edit the armor layer textures to include black stripes
 5. Throw baseballs at enemies - they'll drop and can be picked up!
 
 Enjoy your baseball adventure in Minecraft!
+
+### Quick in-game preview (commands)
+- Give yourself the kit: `/function baseball/kit`
+- Spawn a preview armor stand wearing the uniform and holding items: `/function baseball/spawn_preview`
+
+Tip: You may need cheats enabled to run functions. In world settings, toggle “Activate Cheats.”
