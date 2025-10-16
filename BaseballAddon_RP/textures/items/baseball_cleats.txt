@@ -1,0 +1,4 @@
+# Baseball Cleats Texture (16x16 PNG)
+# This is a placeholder - you'll need to create a 16x16 pixel art image
+# The texture should show baseball cleats (black or team color)
+# Save this as baseball_cleats.png in the textures/items folder

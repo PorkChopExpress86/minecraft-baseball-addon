@@ -1,0 +1,28 @@
+{
+    "format_version": "1.17.41",
+    "minecraft:recipe_shaped": {
+        "description": {
+            "identifier": "baseball:baseball_bat"
+        },
+        "tags": ["crafting_table"],
+        "pattern": [
+            "  W",
+            " W ",
+            "W  "
+        ],
+        "key": {
+            "W": {
+                "item": "minecraft:stick"
+            }
+        },
+        "unlock": [
+            {
+                "item": "minecraft:stick"
+            }
+        ],
+        "result": {
+            "item": "baseball:bat",
+            "count": 1
+        }
+    }
+}

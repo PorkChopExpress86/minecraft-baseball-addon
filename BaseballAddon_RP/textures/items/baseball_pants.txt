@@ -1,0 +1,4 @@
+# Baseball Pants Texture (16x16 PNG)
+# This is a placeholder - you'll need to create a 16x16 pixel art image
+# The texture should show baseball pants (white or gray)
+# Save this as baseball_pants.png in the textures/items folder

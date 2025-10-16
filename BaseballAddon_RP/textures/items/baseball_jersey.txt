@@ -1,0 +1,4 @@
+# Baseball Jersey Texture (16x16 PNG)
+# This is a placeholder - you'll need to create a 16x16 pixel art image
+# The texture should show a baseball jersey (team color of your choice)
+# Save this as baseball_jersey.png in the textures/items folder

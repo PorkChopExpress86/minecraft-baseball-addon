@@ -1,0 +1,24 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "Baseball Addon - Behavior Pack\nAdds baseball-themed armor, weapons, and items to Minecraft",
+        "name": "Baseball Addon BP",
+        "uuid": "12345678-1234-5678-9abc-123456789012",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 19, 0]
+    },
+    "modules": [
+        {
+            "description": "Baseball Addon Behavior Pack",
+            "type": "data",
+            "uuid": "12345678-1234-5678-9abc-123456789013",
+            "version": [1, 0, 0]
+        }
+    ],
+    "dependencies": [
+        {
+            "uuid": "12345678-1234-5678-9abc-123456789014",
+            "version": [1, 0, 0]
+        }
+    ]
+}

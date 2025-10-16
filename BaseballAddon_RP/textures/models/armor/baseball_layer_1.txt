@@ -1,0 +1,6 @@
+# Baseball Armor Layer 1 (64x32 PNG)
+# This texture should include:
+# - Baseball helmet with team colors
+# - Baseball jersey with pinstripes or team design
+# - Eye black stripes under the eyes area of the helmet
+# Save this as baseball_layer_1.png in the textures/models/armor folder

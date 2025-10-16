@@ -1,0 +1,4 @@
+# Baseball Helmet Texture (16x16 PNG)
+# This is a placeholder - you'll need to create a 16x16 pixel art image
+# The texture should show a baseball helmet (team color of your choice)
+# Save this as baseball_helmet.png in the textures/items folder

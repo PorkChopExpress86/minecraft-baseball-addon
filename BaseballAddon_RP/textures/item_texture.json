@@ -1,0 +1,27 @@
+{
+    "resource_pack_name": "baseball",
+    "texture_name": "atlas.items",
+    "texture_data": {
+        "baseball_bat": {
+            "textures": "textures/items/baseball_bat"
+        },
+        "baseball_glove": {
+            "textures": "textures/items/baseball_glove"
+        },
+        "baseball": {
+            "textures": "textures/items/baseball"
+        },
+        "baseball_helmet": {
+            "textures": "textures/items/baseball_helmet"
+        },
+        "baseball_jersey": {
+            "textures": "textures/items/baseball_jersey"
+        },
+        "baseball_pants": {
+            "textures": "textures/items/baseball_pants"
+        },
+        "baseball_cleats": {
+            "textures": "textures/items/baseball_cleats"
+        }
+    }
+}

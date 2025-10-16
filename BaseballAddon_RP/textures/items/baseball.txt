@@ -1,0 +1,4 @@
+# Baseball Texture (16x16 PNG)
+# This is a placeholder - you'll need to create a 16x16 pixel art image
+# The texture should show a white baseball with red stitching
+# Save this as baseball.png in the textures/items folder

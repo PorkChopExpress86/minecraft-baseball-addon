@@ -1,0 +1,20 @@
+{
+    "format_version": "1.19.0",
+    "minecraft:client_entity": {
+        "description": {
+            "identifier": "baseball:baseball_projectile",
+            "materials": {
+                "default": "entity_alphatest"
+            },
+            "textures": {
+                "default": "textures/items/baseball"
+            },
+            "geometry": {
+                "default": "geometry.baseball"
+            },
+            "render_controllers": [
+                "controller.render.default"
+            ]
+        }
+    }
+}
