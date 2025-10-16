@@ -1,0 +1,44 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build Bedrock packages
+        run: |
+          set -e
+          rm -f BaseballAddon_RP.mcpack BaseballAddon_BP.mcpack BaseballAddon.mcaddon
+          (cd BaseballAddon_RP && zip -r ../BaseballAddon_RP.mcpack .)
+          (cd BaseballAddon_BP && zip -r ../BaseballAddon_BP.mcpack .)
+          zip -r BaseballAddon.mcaddon BaseballAddon_RP.mcpack BaseballAddon_BP.mcpack
+          ls -lh *.mcpack *.mcaddon
+
+      - name: Create GitHub Release and upload assets
+        uses: softprops/action-gh-release@v2
+        with:
+          files: |
+            BaseballAddon.mcaddon
+            BaseballAddon_RP.mcpack
+            BaseballAddon_BP.mcpack
+          name: Baseball Addon ${{ github.ref_name }}
+          body: |
+            Release ${{ github.ref_name }} of the Baseball Addon for Minecraft Bedrock Edition.
+
+            Includes:
+            - BaseballAddon.mcaddon (import both packs at once)
+            - BaseballAddon_RP.mcpack (resource pack only)
+            - BaseballAddon_BP.mcpack (behavior pack only)
+
+            Notes:
+            - Works on iPad/Android/Windows Bedrock 1.19+.
+            - Enable Experimental Features if prompted.
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
