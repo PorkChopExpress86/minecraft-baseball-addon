@@ -6,6 +6,9 @@
             "category": "equipment"
         },
         "components": {
+            "minecraft:icon": {
+                "texture": "baseball_helmet"
+            },
             "minecraft:max_stack_size": 1,
             "minecraft:max_damage": 165,
             "minecraft:hand_equipped": false,

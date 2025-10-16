@@ -6,6 +6,9 @@
             "category": "items"
         },
         "components": {
+            "minecraft:icon": {
+                "texture": "baseball"
+            },
             "minecraft:max_stack_size": 16,
             "minecraft:hand_equipped": false,
             "minecraft:stacked_by_data": true,

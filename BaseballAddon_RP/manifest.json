@@ -3,16 +3,16 @@
     "header": {
         "description": "Baseball Addon - Resource Pack\nAdds baseball-themed textures and models",
         "name": "Baseball Addon RP",
-        "uuid": "12345678-1234-5678-9abc-123456789014",
-        "version": [1, 0, 0],
+        "uuid": "8023cc12-359f-4f12-8556-4f3e77554f7b",
+        "version": [1, 0, 1],
         "min_engine_version": [1, 19, 0]
     },
     "modules": [
         {
             "description": "Baseball Addon Resource Pack",
             "type": "resources",
-            "uuid": "12345678-1234-5678-9abc-123456789015",
-            "version": [1, 0, 0]
+            "uuid": "655d8879-102d-4885-a0ae-6b8775d7fad2",
+            "version": [1, 0, 1]
         }
     ]
 }
