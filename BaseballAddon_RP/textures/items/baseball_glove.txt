@@ -1,4 +1,0 @@
-# Baseball Glove Texture (16x16 PNG)
-# This is a placeholder - you'll need to create a 16x16 pixel art image
-# The texture should show a brown leather baseball glove
-# Save this as baseball_glove.png in the textures/items folder

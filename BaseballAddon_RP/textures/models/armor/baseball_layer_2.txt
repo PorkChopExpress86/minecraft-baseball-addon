@@ -1,5 +1,0 @@
-# Baseball Armor Layer 2 (64x32 PNG)
-# This texture should include:
-# - Baseball pants (white or gray)
-# - Baseball cleats
-# Save this as baseball_layer_2.png in the textures/models/armor folder
