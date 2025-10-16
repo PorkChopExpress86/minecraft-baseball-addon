@@ -1,0 +1,9 @@
+item.baseball:bat.name=Baseball Bat
+item.baseball:glove.name=Baseball Glove
+item.baseball:baseball.name=Baseball
+item.baseball:helmet.name=Baseball Helmet
+item.baseball:jersey.name=Baseball Jersey
+item.baseball:pants.name=Baseball Pants
+item.baseball:cleats.name=Baseball Cleats
+
+entity.baseball:baseball_projectile.name=Baseball

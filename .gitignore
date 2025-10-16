@@ -1,0 +1,18 @@
+# Ignore texture placeholders
+*.txt
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore temporary files
+*.tmp
+*.temp
+
+# Keep actual texture files
+*.png
+*.json
