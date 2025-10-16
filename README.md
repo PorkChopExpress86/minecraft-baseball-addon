@@ -13,20 +13,21 @@ A comprehensive baseball-themed addon for Minecraft Bedrock Edition, featuring c
 
 ## Installation Instructions for iPad/Bedrock Edition
 
-1. **Download the addon files**:
-   - Copy both `BaseballAddon_BP` and `BaseballAddon_RP` folders to your device
+1. **Download the latest release**:
+   - Visit: https://github.com/PorkChopExpress86/minecraft-baseball-addon/releases
+   - Download `BaseballAddon.mcaddon` (v1.0.2 or later)
 
 2. **Install on iPad/Mobile Device**:
-   - Open Minecraft Bedrock Edition
-   - Go to Settings → Global Resources
-   - Import the `BaseballAddon_RP` folder (Resource Pack)
-   - Import the `BaseballAddon_BP` folder (Behavior Pack)
+   - Tap the downloaded `.mcaddon` file in Safari or Files app
+   - Minecraft will open automatically and import both packs
+   - You'll see "Import Successful" messages
 
 3. **Enable in World**:
    - Create a new world or edit an existing one
    - Go to Behavior Packs and activate "Baseball Addon BP"
    - Go to Resource Packs and activate "Baseball Addon RP"
-   - Make sure to enable "Experimental Features" if required
+   - Enable "Experimental Features" if prompted
+   - **Important**: Make sure both packs show a checkmark/enabled state
 
 ## Crafting Recipes
 
@@ -82,4 +83,34 @@ Enjoy your baseball adventure in Minecraft!
 - Give yourself the kit: `/function baseball/kit`
 - Spawn a preview armor stand wearing the uniform and holding items: `/function baseball/spawn_preview`
 
-Tip: You may need cheats enabled to run functions. In world settings, toggle “Activate Cheats.”
+### Getting Individual Items
+Use these commands (requires cheats enabled):
+```
+/give @p baseball:baseball 16
+/give @p baseball:bat
+/give @p baseball:glove
+/give @p baseball:helmet
+/give @p baseball:jersey
+/give @p baseball:pants
+/give @p baseball:cleats
+```
+
+## Troubleshooting
+
+**Items not showing in Creative inventory?**
+1. Make sure you downloaded **v1.0.2 or later** (earlier versions had bugs)
+2. Verify both packs are enabled in world settings (not just added)
+3. Check that Experimental Features are enabled
+4. Try creating a fresh new world with the packs enabled from the start
+5. On iPad, completely close and reopen Minecraft after importing
+
+**Can't find items in Creative tabs?**
+- Search for "baseball" in the Creative search bar
+- Check these categories: Equipment (armor/tools), Items (baseball projectile)
+- Use `/give` commands or `/function baseball/kit` instead
+
+**Items have no texture?**
+- Make sure the Resource Pack (RP) is enabled along with the Behavior Pack (BP)
+- Check that both packs show up in Settings → Global Resources
+
+Tip: You may need cheats enabled to run functions. In world settings, toggle "Activate Cheats."
