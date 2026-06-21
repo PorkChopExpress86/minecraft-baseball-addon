@@ -1,0 +1,79 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.baseball.catcher_mask",
+        "texture_width": 64,
+        "texture_height": 32,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 3,
+        "visible_bounds_offset": [0, 1, 0]
+      },
+      "bones": [
+        {
+          "name": "catcher_mask",
+          "pivot": [0, 24, 0],
+          "binding": "q.item_slot_to_bone_name(context.item_slot)",
+          "cubes": [
+            {
+              "comment": "cap body — same cap as baseball helmet, slightly inflated",
+              "origin": [-4, 24, -4],
+              "size": [8, 8, 8],
+              "inflate": 0.5,
+              "uv": [0, 0]
+            },
+            {
+              "comment": "cap button on top",
+              "origin": [-1, 32, -1],
+              "size": [2, 1, 2],
+              "uv": [36, 0]
+            },
+            {
+              "comment": "cage top bar — runs across forehead at the brow",
+              "origin": [-4, 29, -5.5],
+              "size": [8, 1, 1],
+              "uv": [0, 18]
+            },
+            {
+              "comment": "cage chin guard",
+              "origin": [-3, 24, -5.5],
+              "size": [6, 1, 1],
+              "uv": [20, 18]
+            },
+            {
+              "comment": "cage left side rail",
+              "origin": [-4.5, 24, -5.5],
+              "size": [1, 6, 1],
+              "uv": [0, 22]
+            },
+            {
+              "comment": "cage right side rail",
+              "origin": [3.5, 24, -5.5],
+              "size": [1, 6, 1],
+              "uv": [0, 22]
+            },
+            {
+              "comment": "vertical cage bar 1",
+              "origin": [-2, 25, -5.5],
+              "size": [1, 4, 1],
+              "uv": [6, 22]
+            },
+            {
+              "comment": "vertical cage bar 2",
+              "origin": [-0.5, 25, -5.5],
+              "size": [1, 4, 1],
+              "uv": [6, 22]
+            },
+            {
+              "comment": "vertical cage bar 3",
+              "origin": [1.5, 25, -5.5],
+              "size": [1, 4, 1],
+              "uv": [6, 22]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

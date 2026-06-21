@@ -1,0 +1,111 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.baseball.cleats",
+        "texture_width": 64,
+        "texture_height": 32,
+        "visible_bounds_width": 2,
+        "visible_bounds_height": 1.5,
+        "visible_bounds_offset": [0, 0.25, 0]
+      },
+      "bones": [
+        {
+          "name": "leg_right",
+          "pivot": [-1.9, 12, 0]
+        },
+        {
+          "name": "cleat_right",
+          "parent": "leg_right",
+          "pivot": [-1.9, 12, 0],
+          "binding": "'rightleg'",
+          "cubes": [
+            {
+              "comment": "right boot upper — lower half of right leg",
+              "origin": [-4, 6, -2],
+              "size": [4, 6, 4],
+              "inflate": 0.5,
+              "uv": [0, 0]
+            },
+            {
+              "comment": "right sole — extends slightly past foot edges",
+              "origin": [-4.5, -0.5, -3],
+              "size": [5, 1, 6],
+              "uv": [0, 10]
+            },
+            {
+              "comment": "right cleats — three spike rows",
+              "origin": [-3.5, -1.5, -2.5],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            },
+            {
+              "origin": [-1.5, -1.5, -2.5],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            },
+            {
+              "origin": [0.5, -1.5, -2.5],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            },
+            {
+              "comment": "rear cleat spike",
+              "origin": [-2, -1.5, 2],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            }
+          ]
+        },
+        {
+          "name": "leg_left",
+          "pivot": [1.9, 12, 0]
+        },
+        {
+          "name": "cleat_left",
+          "parent": "leg_left",
+          "pivot": [1.9, 12, 0],
+          "binding": "'leftleg'",
+          "cubes": [
+            {
+              "comment": "left boot upper",
+              "origin": [0, 6, -2],
+              "size": [4, 6, 4],
+              "inflate": 0.5,
+              "uv": [0, 16]
+            },
+            {
+              "comment": "left sole",
+              "origin": [-0.5, -0.5, -3],
+              "size": [5, 1, 6],
+              "uv": [0, 26]
+            },
+            {
+              "comment": "left cleats — three spikes",
+              "origin": [-0.5, -1.5, -2.5],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            },
+            {
+              "origin": [1.5, -1.5, -2.5],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            },
+            {
+              "origin": [3.5, -1.5, -2.5],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            },
+            {
+              "comment": "rear cleat spike",
+              "origin": [1, -1.5, 2],
+              "size": [1, 1, 1],
+              "uv": [20, 0]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

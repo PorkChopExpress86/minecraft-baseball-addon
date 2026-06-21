@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "baseball:catcher_mask",
+      "item": { "baseball:catcher_mask": "query.is_owner_identifier_any('minecraft:player')" },
+      "materials": {
+        "default": "entity_alphatest",
+        "enchanted": "armor_enchanted"
+      },
+      "textures": {
+        "default": "textures/models/armor/baseball_catcher_mask",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": { "default": "geometry.baseball.catcher_mask" },
+      "scripts": {
+        "parent_setup": "variable.helmet_layer_visible = 0.0;"
+      },
+      "render_controllers": ["controller.render.armor"]
+    }
+  }
+}

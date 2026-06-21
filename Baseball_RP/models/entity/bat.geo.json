@@ -1,0 +1,55 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.baseball.bat",
+        "texture_width": 48,
+        "texture_height": 32,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 6,
+        "visible_bounds_offset": [0, 0.5, 0]
+      },
+      "bones": [
+        {
+          "name": "bat",
+          "pivot": [0, 18, 0],
+          "rotation": [135, 0, 0],
+          "binding": "q.item_slot_to_bone_name(context.item_slot)",
+          "cubes": [
+            {
+              "comment": "knob — base of the handle, nearest the hand",
+              "origin": [-1.5, 7, -1.5],
+              "size": [3, 2, 3],
+              "uv": [0, 0]
+            },
+            {
+              "comment": "handle — thin grip section, sits at the hand",
+              "origin": [-1, 9, -1],
+              "size": [2, 10, 2],
+              "uv": [0, 6]
+            },
+            {
+              "comment": "taper — barrel narrows back toward the handle",
+              "origin": [-1.5, 19, -1.5],
+              "size": [3, 3, 3],
+              "uv": [0, 22]
+            },
+            {
+              "comment": "barrel — wide hitting zone; now the FREE end that points away from the hand",
+              "origin": [-3, 22, -3],
+              "size": [6, 12, 6],
+              "uv": [12, 0]
+            },
+            {
+              "comment": "end cap — flat tip of the barrel (the far/striking end)",
+              "origin": [-2.5, 34, -2.5],
+              "size": [5, 1, 5],
+              "uv": [12, 24]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

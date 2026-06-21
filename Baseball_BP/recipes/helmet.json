@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "baseball:recipe_helmet"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "WWW",
+      "L L"
+    ],
+    "key": {
+      "W": { "item": "minecraft:white_wool" },
+      "L": { "item": "minecraft:leather" }
+    },
+    "result": {
+      "item": "baseball:helmet"
+    }
+  }
+}

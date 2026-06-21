@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "baseball:catcher_vest",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.chestplate"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "baseball:catcher_vest",
+      "minecraft:display_name": { "value": "item.baseball:catcher_vest.name" },
+      "minecraft:wearable": {
+        "slot": "slot.armor.chest",
+        "protection": 9,
+        "dispensable": true
+      },
+      "minecraft:durability": { "max_durability": 300 },
+      "minecraft:repairable": {
+        "repair_items": [{ "items": ["minecraft:iron_ingot"], "repair_amount": "query.remaining_durability + 0.05 * query.max_durability" }]
+      },
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] }
+    }
+  }
+}

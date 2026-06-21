@@ -1,0 +1,20 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "baseball:recipe_pants"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      "WWW",
+      "W W",
+      "W W"
+    ],
+    "key": {
+      "W": { "item": "minecraft:white_wool" }
+    },
+    "result": {
+      "item": "baseball:pants"
+    }
+  }
+}

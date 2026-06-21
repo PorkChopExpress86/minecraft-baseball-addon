@@ -1,0 +1,22 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": {
+      "identifier": "baseball:recipe_bat"
+    },
+    "tags": ["crafting_table"],
+    "pattern": [
+      " D ",
+      "PPP",
+      " S "
+    ],
+    "key": {
+      "D": { "item": "minecraft:diamond" },
+      "P": { "item": "minecraft:oak_planks" },
+      "S": { "item": "minecraft:stick" }
+    },
+    "result": {
+      "item": "baseball:bat"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "resource_pack_name": "baseball_addon",
+  "texture_data": {
+    "baseball:helmet": { "textures": "textures/items/helmet" },
+    "baseball:jersey": { "textures": "textures/items/jersey" },
+    "baseball:pants":  { "textures": "textures/items/pants" },
+    "baseball:cleats": { "textures": "textures/items/cleats" },
+    "baseball:bat":          { "textures": "textures/items/bat" },
+    "baseball:catcher_mask": { "textures": "textures/items/catcher_mask" },
+    "baseball:catcher_vest": { "textures": "textures/items/catcher_vest" }
+  }
+}

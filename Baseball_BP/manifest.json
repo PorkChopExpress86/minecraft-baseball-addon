@@ -1,0 +1,34 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Baseball Addon BP",
+    "description": "Baseball-themed gear — uniform, helmet, cleats, and the legendary Home Run Bat",
+    "uuid": "2f0a7fe1-4bdf-4190-979e-6fbb7ea95618",
+    "version": [1, 4, 0],
+    "min_engine_version": [1, 21, 80]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "7023197c-c8cb-40d7-989e-517572c8950e",
+      "version": [1, 0, 0]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "uuid": "76e3530f-fcfd-4cbf-9179-4c62dbf8a558",
+      "version": [1, 0, 0],
+      "entry": "scripts/bat_knockback.js"
+    }
+  ],
+  "dependencies": [
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.0.0"
+    },
+    {
+      "uuid": "3038a3ba-3bf7-4049-9620-3d4fdbc702fd",
+      "version": [1, 4, 0]
+    }
+  ]
+}

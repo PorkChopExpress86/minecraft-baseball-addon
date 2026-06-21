@@ -1,0 +1,10 @@
+pack.name=Baseball Addon
+pack.description=Baseball-themed gear and the legendary Home Run Bat
+
+item.baseball:helmet.name=Baseball Helmet
+item.baseball:jersey.name=Baseball Jersey
+item.baseball:pants.name=Baseball Pants
+item.baseball:cleats.name=Baseball Cleats
+item.baseball:bat.name=Home Run Bat
+item.baseball:catcher_mask.name=Catcher's Mask
+item.baseball:catcher_vest.name=Catcher's Vest

@@ -1,0 +1,17 @@
+{
+  "format_version": "1.20.10",
+  "minecraft:recipe_shaped": {
+    "description": { "identifier": "baseball:catcher_vest" },
+    "tags": ["crafting_table"],
+    "result": { "item": "baseball:catcher_vest" },
+    "pattern": [
+      "ILI",
+      "ILI",
+      "ILI"
+    ],
+    "key": {
+      "I": { "item": "minecraft:iron_ingot" },
+      "L": { "item": "minecraft:leather" }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.baseball.jersey",
+        "texture_width": 64,
+        "texture_height": 32,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [0, 0.75, 0]
+      },
+      "bones": [
+        {
+          "name": "body",
+          "pivot": [0, 24, 0]
+        },
+        {
+          "name": "jersey_body",
+          "parent": "body",
+          "pivot": [0, 24, 0],
+          "binding": "'body'",
+          "cubes": [
+            {
+              "comment": "torso — body occupies [-4,12,-2] to [4,24,2]",
+              "origin": [-4, 12, -2],
+              "size": [8, 12, 4],
+              "inflate": 1.0,
+              "uv": [0, 0]
+            }
+          ]
+        },
+        {
+          "name": "arm_right",
+          "pivot": [-5, 22, 0]
+        },
+        {
+          "name": "jersey_arm_right",
+          "parent": "arm_right",
+          "pivot": [-5, 22, 0],
+          "binding": "'rightarm'",
+          "cubes": [
+            {
+              "comment": "right sleeve — arm occupies [-8,12,-2] to [-4,24,2]",
+              "origin": [-8, 12, -2],
+              "size": [4, 12, 4],
+              "inflate": 1.0,
+              "uv": [0, 16]
+            }
+          ]
+        },
+        {
+          "name": "arm_left",
+          "pivot": [5, 22, 0]
+        },
+        {
+          "name": "jersey_arm_left",
+          "parent": "arm_left",
+          "pivot": [5, 22, 0],
+          "binding": "'leftarm'",
+          "cubes": [
+            {
+              "comment": "left sleeve — arm occupies [4,12,-2] to [8,24,2]",
+              "origin": [4, 12, -2],
+              "size": [4, 12, 4],
+              "inflate": 1.0,
+              "uv": [0, 16],
+              "mirror": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

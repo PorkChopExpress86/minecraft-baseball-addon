@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "baseball:cleats",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.boots"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "baseball:cleats",
+      "minecraft:display_name": { "value": "item.baseball:cleats.name" },
+      "minecraft:wearable": {
+        "slot": "slot.armor.feet",
+        "protection": 2,
+        "dispensable": true
+      },
+      "minecraft:durability": { "max_durability": 195 },
+      "minecraft:repairable": {
+        "repair_items": [{ "items": ["minecraft:leather"], "repair_amount": 48 }]
+      },
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] }
+    }
+  }
+}

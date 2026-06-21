@@ -1,0 +1,21 @@
+{
+  "format_version": "1.20.30",
+  "minecraft:attachable": {
+    "description": {
+      "identifier": "baseball:bat",
+      "item": { "baseball:bat": "query.is_owner_identifier_any('minecraft:player')" },
+      "materials": {
+        "default": "entity",
+        "enchanted": "entity_alphatest_glint"
+      },
+      "textures": {
+        "default": "textures/items/bat_model",
+        "enchanted": "textures/misc/enchanted_item_glint"
+      },
+      "geometry": {
+        "default": "geometry.baseball.bat"
+      },
+      "render_controllers": ["controller.render.item_default"]
+    }
+  }
+}

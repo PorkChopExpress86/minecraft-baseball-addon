@@ -1,0 +1,75 @@
+{
+  "format_version": "1.16.0",
+  "minecraft:geometry": [
+    {
+      "description": {
+        "identifier": "geometry.baseball.catcher_vest",
+        "texture_width": 64,
+        "texture_height": 32,
+        "visible_bounds_width": 3,
+        "visible_bounds_height": 2.5,
+        "visible_bounds_offset": [0, 0.75, 0]
+      },
+      "bones": [
+        {
+          "name": "body",
+          "pivot": [0, 24, 0]
+        },
+        {
+          "name": "vest_body",
+          "parent": "body",
+          "pivot": [0, 24, 0],
+          "binding": "'body'",
+          "cubes": [
+            {
+              "comment": "chest protector torso — inflated 1.5 for the padded look",
+              "origin": [-4, 12, -2],
+              "size": [8, 12, 4],
+              "inflate": 1.5,
+              "uv": [0, 0]
+            }
+          ]
+        },
+        {
+          "name": "arm_right",
+          "pivot": [-5, 22, 0]
+        },
+        {
+          "name": "vest_shoulder_right",
+          "parent": "arm_right",
+          "pivot": [-5, 22, 0],
+          "binding": "'rightarm'",
+          "cubes": [
+            {
+              "comment": "right shoulder pad — upper arm only, no sleeve",
+              "origin": [-8, 18, -2],
+              "size": [4, 6, 4],
+              "inflate": 0.5,
+              "uv": [26, 0]
+            }
+          ]
+        },
+        {
+          "name": "arm_left",
+          "pivot": [5, 22, 0]
+        },
+        {
+          "name": "vest_shoulder_left",
+          "parent": "arm_left",
+          "pivot": [5, 22, 0],
+          "binding": "'leftarm'",
+          "cubes": [
+            {
+              "comment": "left shoulder pad — mirrored",
+              "origin": [4, 18, -2],
+              "size": [4, 6, 4],
+              "inflate": 0.5,
+              "uv": [26, 12],
+              "mirror": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

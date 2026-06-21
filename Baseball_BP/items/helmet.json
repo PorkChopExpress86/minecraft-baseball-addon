@@ -1,0 +1,27 @@
+{
+  "format_version": "1.21.0",
+  "minecraft:item": {
+    "description": {
+      "identifier": "baseball:helmet",
+      "menu_category": {
+        "category": "equipment",
+        "group": "itemGroup.name.helmet"
+      }
+    },
+    "components": {
+      "minecraft:max_stack_size": 1,
+      "minecraft:icon": "baseball:helmet",
+      "minecraft:display_name": { "value": "item.baseball:helmet.name" },
+      "minecraft:wearable": {
+        "slot": "slot.armor.head",
+        "protection": 2,
+        "dispensable": true
+      },
+      "minecraft:durability": { "max_durability": 165 },
+      "minecraft:repairable": {
+        "repair_items": [{ "items": ["minecraft:leather"], "repair_amount": 40 }]
+      },
+      "minecraft:tags": { "tags": ["minecraft:is_armor"] }
+    }
+  }
+}
