@@ -13,37 +13,37 @@
       "bones": [
         {
           "name": "bat",
-          "pivot": [0, 18, 0],
-          "rotation": [135, 0, 0],
+          "pivot": [0, 0, 0],
+          "rotation": [0, 0, 0],
           "binding": "q.item_slot_to_bone_name(context.item_slot)",
           "cubes": [
             {
-              "comment": "knob — base of the handle, nearest the hand",
-              "origin": [-1.5, 7, -1.5],
+              "comment": "knob — base of the bat at the origin; pivot [0,0,0] binds here so the knob sits in the fist (no float)",
+              "origin": [-1.5, 0, -1.5],
               "size": [3, 2, 3],
               "uv": [0, 0]
             },
             {
               "comment": "handle — thin grip section, sits at the hand",
-              "origin": [-1, 9, -1],
+              "origin": [-1, 2, -1],
               "size": [2, 10, 2],
               "uv": [0, 6]
             },
             {
               "comment": "taper — barrel narrows back toward the handle",
-              "origin": [-1.5, 19, -1.5],
+              "origin": [-1.5, 12, -1.5],
               "size": [3, 3, 3],
               "uv": [0, 22]
             },
             {
-              "comment": "barrel — wide hitting zone; now the FREE end that points away from the hand",
-              "origin": [-3, 22, -3],
+              "comment": "barrel — wide hitting zone; the FREE end that points away from the hand",
+              "origin": [-3, 15, -3],
               "size": [6, 12, 6],
               "uv": [12, 0]
             },
             {
               "comment": "end cap — flat tip of the barrel (the far/striking end)",
-              "origin": [-2.5, 34, -2.5],
+              "origin": [-2.5, 27, -2.5],
               "size": [5, 1, 5],
               "uv": [12, 24]
             }

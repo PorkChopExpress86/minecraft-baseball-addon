@@ -60,3 +60,21 @@
 **Root cause:** `bat.geo.json` bone rotation was `[45, 0, 0]`. The barrel cubes sit below the pivot (Y=-7 to 6, pivot Y=14), so at 45° X-rotation the barrel points down-forward. Needed an additional 90° to flip the barrel above the pivot.
 **Fix:** Changed rotation in `Baseball_RP/models/entity/bat.geo.json` from `[45, 0, 0]` to `[135, 0, 0]`. The barrel now points up-forward; the knob drops below the hand; handle pivot at Y=14 remains in the grip area.
 **Date:** 2026-06-20
+
+---
+
+## Baseball helmet completely hid the player's face
+
+**Symptom:** Wearing `baseball:helmet` rendered a solid navy block over the entire head — no face visible. (Asked to ensure head gear lets the face show.)
+**Root cause:** The cap geometry was a full 8×8×8 shell enclosing the whole head (`origin [-4,24,-4]`, `inflate 0.5`), and `armor_helmet()` paints the texture fully opaque navy with the opaque `armor` material. Nothing was transparent over the face and the geometry physically covered it. (The brim was also at `y24` = chin level, not the brow.)
+**Fix:** Rebuilt `helmet.geo.json`: cap is now a CROWN on top of the head (`origin [-4.5,30,-4.5]`, `size [9,4,9]`) + brim raised to brow (`origin [-3.5,30,-8]`) + button on top — the geometry no longer covers the face region (y24-30). No texture/material change needed. (Contrast: `catcher_mask.geo.json` keeps a full cap but `armor_catcher_mask()` clears the face UV to transparent + uses `entity_alphatest`, so its face shows through the cage — that one was already correct.)
+**Date:** 2026-06-24
+
+---
+
+## Held bat renders barrel-down and offset from the hand regardless of geometry rotation
+
+**Symptom:** The equipped bat always rendered with the red barrel pointing straight DOWN and floating off to the player's side, never seated in the fist. Tried baked bone rotations `[135,0,0]`, `[45,0,0]`, `[-135,0,0]` (and pivots 18/14/4/0) — all looked barrel-down in-game. Changing the baked rotation a full 180° did not flip the bat.
+**Root cause:** For a held-item attachable, the geometry bone's baked `rotation` is **overridden by Minecraft's default hold pose** — it does not orient the held item (a 180° change producing no flip proved this). Compounding it: an offline orthographic renderer that assumes "model +Y = world up" mispredicts the result; the real main-hand item frame differs (empirically, rotating about model-X swings the bat *sideways*, so model-X ≈ world forward/back and the lift/pitch axis is model-Z). The earlier 2026-06-20 entry's `[45]→[135]` "fix" was based on the wrong assumption that the baked rotation controls orientation. Also: a long bat (~28px) pointing down throws the barrel ~1.75 blocks from the hand, which reads as "not in the hand."
+**Fix (in progress as of this date):** Switched orientation control to **hold animations** — added `Baseball_RP/animations/bat.animation.json` (`animation.baseball.bat.hold_first_person` / `hold_third_person`) wired via `animations` + `scripts.animate` in `bat.player.json`; reset the baked geometry `rotation` to `[0,0,0]` and pivot to `[0,0,0]` (grip at knob). Orientation is now tuned via the hold-animation `rotation` (calibrating on the Z axis, currently `[0,0,135]`; sign flip = forward-vs-back). The bat visibly responded to the hold animation (confirming the mechanism); final angle pending the next in-game screenshot. Trust in-game screenshots over the offline renderer for held-item orientation.
+**Date:** 2026-06-24

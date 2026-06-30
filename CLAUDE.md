@@ -13,6 +13,7 @@ Baseball_BP/          Behavior pack (items, recipes, scripts, manifest)
 Baseball_RP/          Resource pack (models, textures, attachables, manifest)
   models/entity/      *.geo.json — 3D geometry for each wearable/holdable
   attachables/        *.player.json — binds items to player skeleton
+  animations/         *.animation.json — hold_first/third_person poses (orients held items; see bat note)
   textures/items/     16x16 item icons (PNG)
   textures/models/    64x32 worn-armor atlases (PNG)
 generate_textures.py  Procedural PNG generator — run this after any texture change
@@ -39,8 +40,11 @@ $env:PYTHONIOENCODING="utf-8"; python validate_addon.py
 
 ## Key Files
 - `bat_knockback.js` — uses `applyKnockback({x,z}, vertical)` 2-arg form (4-arg form removed in 2.0.0); `setOnFire(seconds)` for fire
-- `bat.geo.json` — bat bone rotation `[135, 0, 0]` (barrel points up-forward like a sword; pivot Y=14 sits at handle grip center)
+- **Held-item orientation is controlled by HOLD ANIMATIONS, not the geometry's baked `rotation`** (`animation.baseball.bat.hold_third_person` / `hold_first_person` in `Baseball_RP/animations/bat.animation.json`, wired via `animations` + `scripts.animate` in `bat.player.json`). POSITION is controlled by the geometry bone **pivot** (pivot `[0,0,0]` = grip at the knob/origin, seats in the fist; lowering the pivot slid the bat lower in the hand). The baked geometry `rotation` is kept at `[0,0,0]`.
+- **2026-06-24 finding corrected 2026-06-30**: the original session concluded baked geometry `rotation` was "overridden by Minecraft's default hold pose" because `hold_third_person` appeared to have no effect in-game. Root cause was actually a `"comment"` key left inside the `bat` bone's rotation object in `bat.animation.json` — `"comment"` is a documented-safe convention inside geometry **cubes**, but the official `actor_animation:1.8.0` schema does NOT list `comment` as a valid property of an animation bone (only `relative_to`, `position`, `rotation`, `scale` are allowed), so it was silently breaking the third-person pose specifically. `hold_first_person` had no `comment` key and was presumably applying correctly the whole time. Lesson: never put a `"comment"` field inside an animation bone's pose object — geometry cubes tolerate it, animation bones don't.
+- `bat.geo.json` — knob at local y=0, barrel up the +Y axis to the end cap at y≈28; bone pivot `[0,0,0]`. Tune the hold-animation `rotation` to point the barrel up-and-forward. Calibration so far (derived from baked-geometry tests, unaffected by the comment bug above): at rest the barrel points world-DOWN; `[90,0,0]` (X) swung it sideways → model-X ≈ world forward/back, so the lift/pitch axis is **Z** (currently `[0,0,135]` in both hold animations — now that the comment-field bug is fixed, this needs an in-game retest since it may be applying correctly for the first time; flip sign if it comes out up-and-back instead of up-and-forward). The offline previewer `scratchpad/render_bat.py` models the *baked* rotation only, so it does NOT predict the hold-animation pose — trust in-game screenshots for held-item orientation.
 - `helmet.geo.json` / `catcher_mask.geo.json` — binding: `q.item_slot_to_bone_name(context.item_slot)`, pivot `[0, 24, 0]`
+- **Head gear must not hide the player's face** (player head cube = y24-32, face = its front/north UV region `[8,8]..[15,15]`). Two working approaches in this addon: (1) `helmet.geo.json` = a CROWN cube on TOP of the head (`y30-34`) + brim at brow `y30` — geometry simply doesn't cover the face (uses opaque `armor` material, solid-navy texture). (2) `catcher_mask.geo.json` = full-head cap cube, but `armor_catcher_mask()` in `generate_textures.py` clears the face UV region to TRANSPARENT (`rect(8,8,15,15, TRANSPARENT)`) AND the attachable uses `entity_alphatest` material so the face shows through the cage. Don't give the helmet a full opaque head shell — it blanks the face.
 - `jersey.geo.json` / `catcher_vest.geo.json` — three bone pairs: body, rightarm, leftarm with binding strings `'body'`, `'rightarm'`, `'leftarm'`
 
 ## Gotchas
