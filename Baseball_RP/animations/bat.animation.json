@@ -5,7 +5,8 @@
       "loop": true,
       "bones": {
         "bat": {
-          "rotation": [0, 0, 135]
+          "rotation": [97, -1.5, -49],
+          "position": [1.5, -2.5, -10.5]
         }
       }
     },
@@ -13,7 +14,8 @@
       "loop": true,
       "bones": {
         "bat": {
-          "rotation": [0, 0, 135]
+          "rotation": [152, -9, 25],
+          "position": [-7, -3, -2]
         }
       }
     }

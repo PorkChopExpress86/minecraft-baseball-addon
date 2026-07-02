@@ -4,7 +4,7 @@
     "name": "Baseball Addon RP",
     "description": "Baseball-themed gear — textures, models, and attachables",
     "uuid": "3038a3ba-3bf7-4049-9620-3d4fdbc702fd",
-    "version": [1, 4, 0],
+    "version": [1, 4, 1],
     "min_engine_version": [1, 21, 80]
   },
   "modules": [
