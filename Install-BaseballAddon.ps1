@@ -347,6 +347,24 @@ if ($worldsDirs.Count -eq 0) {
     }
 }
 
+# ── Build .mcaddon for iPad / iPhone (and other manual-install platforms) ─────
+
+Write-Host ""
+Write-Host "-- Building .mcaddon package ----------------------------------------" -ForegroundColor White
+Write-Host ""
+
+$mcaddonScript = Join-Path $ScriptRoot 'build_mcaddon.py'
+if (Test-Path $mcaddonScript) {
+    python $mcaddonScript
+    if ($LASTEXITCODE -eq 0) {
+        Write-Ok "Baseball_Addon.mcaddon rebuilt"
+    } else {
+        Write-Warn "build_mcaddon.py failed (exit $LASTEXITCODE) -- .mcaddon may be stale"
+    }
+} else {
+    Write-Warn "build_mcaddon.py not found -- skipping .mcaddon build"
+}
+
 Write-Host ""
 Write-Host "Done." -ForegroundColor White
 Write-Host ""

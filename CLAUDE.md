@@ -18,7 +18,9 @@ Baseball_RP/          Resource pack (models, textures, attachables, manifest)
   textures/models/    64x32 worn-armor atlases (PNG)
 generate_textures.py  Procedural PNG generator — run this after any texture change
 validate_addon.py     Static checker — run before every deploy
-Install-BaseballAddon.ps1   PowerShell installer/updater for com.mojang
+build_mcaddon.py      Zips Baseball_BP + Baseball_RP into Baseball_Addon.mcaddon (iPad/iPhone install file)
+Baseball_Addon.mcaddon  Build output (regenerated every run, not hand-edited) — send this to iOS devices
+Install-BaseballAddon.ps1   PowerShell installer/updater for com.mojang; also runs build_mcaddon.py at the end
 ```
 
 ## How to Develop
@@ -29,6 +31,8 @@ python generate_textures.py
 $env:PYTHONIOENCODING="utf-8"; python validate_addon.py
 .\Install-BaseballAddon.ps1
 ```
+
+`Install-BaseballAddon.ps1` ends by running `build_mcaddon.py`, which zips `Baseball_BP` + `Baseball_RP` into `Baseball_Addon.mcaddon` at the project root — the file to send to iPad/iPhone (AirDrop, email, or a cloud-drive app; tapping it in Files opens Minecraft and imports both packs). It always rebuilds from current source, so it never goes stale after a version bump. Run `python build_mcaddon.py` directly if you want the file without doing a full local install/deploy.
 
 ## Environment
 - Platform: Windows 11, standalone Minecraft Bedrock launcher (not UWP Store)
