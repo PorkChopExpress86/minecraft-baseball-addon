@@ -99,8 +99,11 @@ class Canvas:
 # ---------------------------------------------------------------------------
 def icon_bat():
     c = Canvas(16, 16)
-    # tapered barrel (top-right) down to thin handle + knob (bottom-left)
+    # tapered barrel (top-right, painted red) down to thin wood handle + knob
+    # (bottom-left) -- matches bat_model.png, which paints the barrel + end
+    # cap red and leaves the knob/handle/taper natural wood.
     steps = 48
+    split = 0.54  # wood share (knob+handle+taper) vs red share (barrel+end cap)
     for i in range(steps + 1):
         t = i / steps
         x = 3 + (12 - 3) * t          # handle -> barrel along the diagonal
@@ -112,7 +115,10 @@ def icon_bat():
         x = 3 + (12 - 3) * t
         y = 13 - (13 - 3) * t
         r = 0.9 + 1.6 * t
-        col = WOOD_DK if (i % 6 == 0) else (WOOD_MID if t < 0.45 else WOOD)
+        if t < split:
+            col = WOOD_DK if (i % 6 == 0) else WOOD_MID
+        else:
+            col = RED_DK if (i % 6 == 0) else RED
         c.disc(x, y, r, col)
     c.disc(3, 13, 1.9, BLACK)         # knob outline
     c.disc(3, 13, 1.3, KNOB)          # knob
