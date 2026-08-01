@@ -2,6 +2,8 @@
 
 A Minecraft Bedrock Edition addon that adds a full baseball-themed gear set — bat, helmet, jersey, pants, cleats, catcher's mask, and catcher's vest. The Home Run Bat applies Smash-Bros-style knockback and sets targets on fire when it lands a hit.
 
+![Equipment showcase](assets/equipment_showcase.png)
+
 ## Requirements
 
 - Minecraft Bedrock Edition **1.21.80 or higher**
